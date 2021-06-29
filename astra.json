@@ -1,0 +1,12 @@
+{
+  "name": "ToDo App using JAMStack, Netlify, and AstraDB",
+  "description": "This is an example React To-Do application using a DataStax Astra free tier database.",
+  "duration": "10 minutes",
+  "skillLevel": "Beginner",
+  "githubUrl": "https://github.com/DataStax-Examples/todo-astra-jamstack-netlify",
+  "gitpodUrl": "https://dtsx.io/3gtADSq",
+  "netlifyUrl": "https://dtsx.io/2EtfGty",
+  "tags": [{ "name": "javascript" }, { "name": "REST API" }],
+  "category": "apps",
+  "priority": 2
+}
