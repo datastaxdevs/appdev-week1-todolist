@@ -1,0 +1,20 @@
+image: gitpod/workspace-full
+tasks:
+  - init: yarn install
+    command:  . ./gitpod-setup.sh && npm run dev
+    name: Setup script
+ports:
+  - port: 8080 # Application
+    onOpen: ignore
+  - port: 8888 # Webpack dev server
+    onOpen: open-browser
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: false
+    pullRequestsFromForks: false
+    addCheck: false
+    addComment: false
+    addBadge: false
+    addLabel: false
