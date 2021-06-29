@@ -8,13 +8,3 @@ ports:
     onOpen: ignore
   - port: 8888 # Webpack dev server
     onOpen: open-browser
-github:
-  prebuilds:
-    master: true
-    branches: false
-    pullRequests: false
-    pullRequestsFromForks: false
-    addCheck: false
-    addComment: false
-    addBadge: false
-    addLabel: false
