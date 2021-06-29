@@ -145,11 +145,12 @@ body {
 }
 
 .css-e393sm span {
-	line-height: 12px;
+	line-height: 15px;
 }
 
 .css-y965hj {
 	font-size: 18px !important;
+	padding-bottom: 5px;
 }
 
 .toggle-all:checked + label:before {
@@ -401,7 +402,8 @@ html .clear-completed:active {
 }
 
 .todo-console { 
-	background-color: #EEEEEE;
+	background-color: #242424;
+	/*background: rgba(97, 175, 254, 0.3);*/
 	font-size: 20px;
 	margin-top: 20px;
 	padding-top: 10px;

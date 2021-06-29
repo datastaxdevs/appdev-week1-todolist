@@ -78,7 +78,7 @@ class App extends Component {
 		return (
 			<div>
 				<div>
-					<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridGap: 50 }}>
+					<div>
 						<div className="todos">
 							<Header title="REST todos" addTodo={this.actions.addRestTodo}  type="rest"/>
 							<TodoList type="rest" todos={this.state.restTodos} actions={this.actions} />
@@ -87,7 +87,7 @@ class App extends Component {
 				</div>
 				<div>
 					<div className="todo-console">
-						<Console logs={this.state.logs} variant="light" />
+						<Console logs={this.state.logs} variant="dark" />
 					</div>
 				</div>
 			</div>
