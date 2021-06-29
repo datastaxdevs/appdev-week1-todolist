@@ -1,6 +1,0 @@
-image: gitpod/workspace-full
-ports:
-  - port: 8080 # Application
-    onOpen: ignore
-  - port: 8888 # Webpack dev server
-    onOpen: open-browser
