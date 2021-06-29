@@ -206,19 +206,6 @@ body {
 	opacity: 0;
 }
 
-.doc li.completed label {
-	color: lightblue;
-	text-decoration: line-through;
-}
-
-.doc li label {
-	color: #4a9ab4
-}
-
-.doc h1 {
-	color: #4a9ab4
-}
-
 .rest h1 {
 	color: green
 }
@@ -230,20 +217,6 @@ body {
 
 .rest li label{
 	color: green
-}
-
-
-.graphql li label {
-	color: red
-}
-
-.graphql h1 {
-	color: red
-}
-
-.graphql li.completed label {
-	color: pink;
-	text-decoration: line-through;
 }
 
 .todo-list li .toggle + label {
