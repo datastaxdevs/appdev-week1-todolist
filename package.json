@@ -17,7 +17,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "todomvc-app-css": "^2.0.6"
+    "todomvc-app-css": "^2.0.6",
+    "react-scroll-to-bottom": "^4.1.2"
   },
   "engine": {
     "npm": "^7.0.0"

@@ -4,6 +4,7 @@ import TodoList from './TodoList';
 import api from './utils/api';
 import uuid from 'node-uuid';
 import { Hook, Console, Decode } from 'console-feed';
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 class App extends Component {
 	constructor(props) {
@@ -21,6 +22,7 @@ class App extends Component {
 			text: text,
 			key: 'rest',
 		})
+
     api.getRestTodos().then((restTodos) => this.setState({ restTodos }));
 	};
 
@@ -86,9 +88,9 @@ class App extends Component {
 					</div>
 				</div>
 				<div>
-					<div className="todo-console">
+					<ScrollToBottom className="todo-console">
 						<Console logs={this.state.logs} variant="dark" />
-					</div>
+					</ScrollToBottom>
 				</div>
 			</div>
 		);

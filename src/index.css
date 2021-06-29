@@ -84,7 +84,7 @@ body {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	font-size: 18px;
+	font-size: 20px;
 	font-family: inherit;
 	font-weight: inherit;
 	line-height: 1.4em;
@@ -208,16 +208,16 @@ body {
 }
 
 .rest h1 {
-	color: green
+	/*color: green*/
 }
 
 .rest li.completed label {
-	color: lightgreen;
+	/*color: lightgreen;*/
 	text-decoration: line-through;
 }
 
 .rest li label{
-	color: green
+	/*color: green*/
 }
 
 .todo-list li .toggle + label {
@@ -408,6 +408,6 @@ html .clear-completed:active {
 	margin-top: 20px;
 	padding-top: 10px;
 	box-sizing: border-box;
-	height: 400px;
+	height: 450px;
 	overflow-y: scroll;
 }
