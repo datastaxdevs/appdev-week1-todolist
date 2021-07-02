@@ -169,3 +169,78 @@ What this allows us to do is reuse our `List` component for any given array. Let
 ```
 
 ![Image](/tutorial/app_2lists.png)
+
+Now our component is dynamic! All we need to do is get a list of items as an array, and we can use our component to list the items out.
+
+...But we can go deeper
+![deeper](/tutorial/deeper.gif)
+
+Let's make another new component
+
+`components/Item.js`
+``` javascript
+import React from 'react';
+
+function Item(props) {
+    const { item } = props;
+
+    return (
+        <p>{item}</p>
+    );
+}
+
+export default Item;
+```
+
+And import and use this component in place of `<p>{item}</p>` in our `List` component.
+
+Edit `List.js`
+``` javascript
+import React from 'react';
+import Item from './Item';
+
+function List(props) {
+    const { itemList } = props;
+
+    return (
+        itemList.map((item) => (
+            <Item item={item} />
+        ))
+    );
+}
+
+export default List;
+```
+
+Now we have an `Item` component that we can customize. For example, we can give the item a different background when the user mouses over.
+
+Edit `Item.js`
+``` javascript
+import React from 'react';
+
+function Item(props) {
+    const { item } = props;
+    const [bg, setBg] = React.useState('');
+
+    const handleMouseOver = () => {
+        setBg('red');
+    }
+    const handleMouseOut = () => {
+        setBg('');
+    }
+
+    return (
+        <p 
+            onMouseOver={handleMouseOver} 
+            onMouseOut={handleMouseOut} 
+            style={{backgroundColor: bg}}
+        >
+            {item}
+        </p>
+    );
+}
+
+export default Item;
+```
+
+![deeper](/tutorial/app_customItem.gif)
