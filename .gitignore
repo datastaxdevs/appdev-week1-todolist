@@ -30,3 +30,4 @@ yarn-error.log*
 
 # local dev
 /test-app
+/.vscode
