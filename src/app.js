@@ -87,11 +87,6 @@ class App extends Component {
 						</div>
 					</div>
 				</div>
-				<div>
-					<ScrollToBottom className="todo-console">
-						<Console logs={this.state.logs} variant="dark" />
-					</ScrollToBottom>
-				</div>
 			</div>
 		);
 	}
