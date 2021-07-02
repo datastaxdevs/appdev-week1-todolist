@@ -173,6 +173,9 @@ What this allows us to do is reuse our `List` component for any given array. Let
 Now our component is dynamic! All we need to do is get a list of items as an array, and we can use our component to list the items out.
 
 ...But we can go deeper
+
+## Going Deeper
+
 ![deeper](/tutorial/deeper.gif)
 
 Let's make another new component
@@ -243,4 +246,34 @@ function Item(props) {
 export default Item;
 ```
 
-![deeper](/tutorial/app_customItem.gif)
+![item](/tutorial/app_customItem.gif)
+
+Or we can add input to each item.
+
+Edit `Item.js`
+``` javascript
+import React from 'react';
+
+function Item(props) {
+    const { item } = props;
+    const [isChecked, setIsChecked] = React.useState(false);
+
+    return (
+        <div>
+            <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={() => setIsChecked(true)}
+            />
+            <label>{item}</label>
+        </div>
+    );
+}
+
+export default Item;
+```
+
+![item](/tutorial/app_inputItem.gif)
+
+
+Voila!
