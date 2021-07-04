@@ -72,14 +72,10 @@ function App() {
 	};
 
 	return (
-		<div>
-		<div>
-			<div>
-				<div className="todos">
-					<Header title="REST todos" addTodo={actions.addRestTodo}  type="rest"/>
-					<TodoList type="rest" todos={restTodos} actions={actions} />
-				</div>
-			</div>
+	<div>
+		<div className="todos">
+			<Header title="REST todos" addTodo={actions.addRestTodo}  type="rest"/>
+			<TodoList type="rest" todos={restTodos} actions={actions} />
 		</div>
 		<div>
 			<ScrollToBottom className="todo-console">
