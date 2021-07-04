@@ -207,16 +207,16 @@ body {
 	opacity: 0;
 }
 
-.rest h1 {
+h1 {
 	/*color: green*/
 }
 
-.rest li.completed label {
+li.completed label {
 	/*color: lightgreen;*/
 	text-decoration: line-through;
 }
 
-.rest li label{
+li label{
 	/*color: green*/
 }
 

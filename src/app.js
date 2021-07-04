@@ -1,88 +1,73 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import Header from './Header';
 import TodoList from './TodoList';
 import api from './utils/api';
 import uuid from 'node-uuid';
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			restTodos: [],
-			logs: [],
-		};
-	}
+function App() {
+	const [restTodos, setRestTodos] = React.useState([]);
 
-	addRestTodo = async (text) => {
+	const addRestTodo = async (text) => {
 		await api.addRestTodo({
 			id: uuid.v1(),
 			completed: false,
 			text: text,
 			key: 'rest',
-		})
+		});
 
-    	this.getRestTodos();
+    	getRestTodos();
 	};
 
-	deleteRestTodo = async (id) => {
+	const deleteRestTodo = async (id) => {
 		await api.deleteRestTodo(id);
-		this.getRestTodos();
+		getRestTodos();
 	};
 
-	completeRestTodo = async (id, text, completed) => {
+	const completeRestTodo = async (id, text, completed) => {
 		await api.updateRestTodo({
 			id,
 			text,
 			completed: !completed,
 		});
 
-		this.getRestTodos();
+		getRestTodos();
 	};
 
-	componentDidMount = async () => {
-		this.getRestTodos();
-	};
+	useEffect(() => {
+		getRestTodos();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
-	getRestTodos = async () => {
+	useEffect(() => {
+		console.log("STATE Change:", restTodos)
+	}, [restTodos]);
+
+	const getRestTodos = async () => {
 		// Reload the todo list from the database to see the latest changes
-		api.getRestTodos().then((restTodos) => this.setState({ restTodos }));
+		api.getRestTodos().then((restTodos) => setRestTodos( restTodos ));
 	};
 
-	async completeAll(type) {
-		return this.completeRestAll();
-	}
-
-	async clearCompleted(type) {
-		await this.clearRestCompleted();
-	}
-
-	clearRestCompleted = async () => {
+	const clearRestCompleted = async () => {
 		let docTodos = api.getRestTodos();
 		docTodos.forEach((todo) => {
-			this.completeRestTodo(todo.id, todo.text, true);
+			completeRestTodo(todo.id, todo.text, true);
 		});
 	};
 
-	actions = {
-		addRestTodo: this.addRestTodo,
-		completeRestTodo: this.completeRestTodo,
-		clearCompleted: this.clearCompleted,
-		completeAll: this.completeAll,
-		clearRestCompleted: this.clearRestCompleted,
-		getRestTodos: this.getRestTodos,
-		deleteRestTodo: this.deleteRestTodo,
+	const actions = {
+		addRestTodo: addRestTodo,
+		completeRestTodo: completeRestTodo,
+		clearRestCompleted: clearRestCompleted,
+		getRestTodos: getRestTodos,
+		deleteRestTodo: deleteRestTodo,
 	};
 
-	render() {
-		return (
-
-			<div className="todos">
-				<Header title="REST todos" addTodo={this.actions.addRestTodo}  type="rest"/>
-				<TodoList type="rest" todos={this.state.restTodos} actions={this.actions} />
-			</div>
-
-		);
-	}
+	return (
+		<div className="todos">
+			<Header title="REST todos" addTodo={actions.addRestTodo}  type="rest"/>
+			<TodoList type="rest" todos={restTodos} actions={actions} />
+		</div>
+	);
 }
 
 export default App;

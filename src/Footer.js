@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from 'react';
 import classnames from "classnames";
 
 const FILTER_TITLES = {
@@ -7,10 +7,10 @@ const FILTER_TITLES = {
   SHOW_COMPLETED: "Completed",
 };
 
-export default class Footer extends Component {
-  renderTodoCount() {
-    const { activeCount } = this.props;
+function Footer (props) {
+  const { activeCount } = props;
 
+  const renderTodoCount = () => {
     const itemWord = activeCount === 1 ? "item" : "items";
 
     return (
@@ -21,9 +21,9 @@ export default class Footer extends Component {
     );
   }
 
-  renderFilterLink(filter) {
+  const renderFilterLink = (filter) => {
     const title = FILTER_TITLES[filter];
-    const { filter: selectedFilter, onShow } = this.props;
+    const { filter: selectedFilter, onShow } = props;
 
     return (
       <button className={classnames({ selected: filter === selectedFilter })}
@@ -31,18 +31,23 @@ export default class Footer extends Component {
     );
   }
 
-  renderFilterList() {
+  const renderFilterList = () => {
     return ["SHOW_ALL", "SHOW_ACTIVE", "SHOW_COMPLETED"].map((filter) => (
-      <li key={filter}>{this.renderFilterLink(filter)}</li>
+      <li key={filter}>{renderFilterLink(filter)}</li>
     ));
   }
 
-  render() {
-    return (
-      <footer className="footer">
-        {this.renderTodoCount()}
-        <ul className="filters">{this.renderFilterList()}</ul>
-      </footer>
-    );
-  }
+  useEffect(() => {
+		console.log("PROP Change: Active items is %d", activeCount);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [activeCount]);
+
+  return (
+    <footer className="footer">
+      {renderTodoCount()}
+      <ul className="filters">{renderFilterList()}</ul>
+    </footer>
+  );
 }
+
+export default Footer;

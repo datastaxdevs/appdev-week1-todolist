@@ -1,7 +1,9 @@
 import React from "react";
 import TodoTextInput from "./TodoTextInput";
 
-const Header = ({ title, addTodo, type }) => {
+function Header (props) {
+  const { title, addTodo } = props;
+
   const handleSave = (text) => {
     if (text.length !== 0) {
       addTodo(text);
@@ -10,7 +12,7 @@ const Header = ({ title, addTodo, type }) => {
   const label = title;
 
   return (
-    <header className={`header ${type}`}>
+    <header className={`header`}>
       <h1>{label}</h1>
       <TodoTextInput
         newTodo
@@ -19,6 +21,6 @@ const Header = ({ title, addTodo, type }) => {
       />
     </header>
   );
-};
+}
 
 export default Header;
