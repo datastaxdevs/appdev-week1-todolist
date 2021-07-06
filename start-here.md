@@ -1,20 +1,24 @@
 # Setup Basic App - Create React App
 
-## create-react-app
+## Step 1 - Checkout 'start-here' Branch
+In the Gitpod terminal, run `git checkout 'start-here'`. This will checkout an empty environment as a starting point.
+
+
+## Step 2 - create-react-app
 
 Create React App is a fantastic tool to spin up a basic React App with all necessary dependencies.
 
-Run `npx create-react-app .`
+✅ Run `npx create-react-app .`
 
 And that's it! We now have a basic React App. We can go ahead and run the app right away.
 
-Run `npm start`.
+✅ Run `npm start`
 
 ![Image](/tutorial/app_basic.png)
 
 As the message states, we can make changes to `App.js` to update the page. Let's make a few changes.
 
-Edit `src/App.js`
+✅ Edit `src/App.js`
 ``` javascript
 import logo from './logo.svg';
 import './App.css';
@@ -44,11 +48,11 @@ Cool right?
 For our Todo App, we are going to want to have a list of Todos, so let's go over making a new component.
 
 
-## Basic Component
+## Step 3 - Basic Component
 - Create a folder, `components`
 - Create a new file, `List.js`
 
-Edit `List.js`
+✅ Edit `List.js`
 ``` javascript
 import React from 'react'
 
@@ -71,7 +75,7 @@ const itemList = ["Get milk", "Buy Amazon", "Take over the world"];
 
 Now let's render this list by mapping each item in the array to a `<p>` tag.
 
-Edit `List.js`
+✅ Edit `List.js`
 ``` javascript
 import React from 'react'
 
@@ -90,7 +94,7 @@ export default List;
 
 Great! We've created our first custom component! Now we need to import it into `App.js` and use it.
 
-Edit `App.js`
+✅ Edit `App.js`
 ``` javascript
 import logo from './logo.svg';
 import './App.css';
@@ -117,11 +121,11 @@ Now save, and reload the site.
 
 Awesome! But that's just the start. We can make our component more dynamic using `props`.
 
-## Component Props
+## Step 4 - Component Props
 
 Okay, so we have our `List.js` component, but it's not very dynamic. It just takes the array we specified and spits out each item as text. We can move the array out of the `List` component and provide it as a `prop` instead.
 
-Edit `List.js`
+✅ Edit `List.js`
 ``` javascript
 import React from 'react'
 
@@ -146,7 +150,7 @@ Now our `List` component is going to be looking for a `prop` called `itemList` t
 
 Let's add this to `App.js`.
 
-Edit `App.js`
+✅ Edit `App.js`
 ``` javascript
 import logo from './logo.svg';
 import './App.css';
@@ -179,13 +183,13 @@ Now our component is dynamic! All we need to do is get a list of items as an arr
 
 ...But we can go deeper
 
-## Going Deeper
+## Step 5 - Going Deeper
 
 ![deeper](/tutorial/deeper.gif)
 
 Let's make another new component
 
-`components/Item.js`
+✅ Create `components/Item.js`
 ``` javascript
 import React from 'react';
 
@@ -202,7 +206,7 @@ export default Item;
 
 And import and use this component in place of `<p>{item}</p>` in our `List` component.
 
-Edit `List.js`
+✅ Edit `List.js`
 ``` javascript
 import React from 'react';
 import Item from './Item';
@@ -222,7 +226,7 @@ export default List;
 
 Now we have an `Item` component that we can customize. For example, we can give the item a different background when the user mouses over.
 
-Edit `Item.js`
+✅ Edit `Item.js`
 ``` javascript
 import React from 'react';
 
@@ -255,7 +259,7 @@ export default Item;
 
 Or we can add input to each item.
 
-Edit `Item.js`
+✅ Edit `Item.js`
 ``` javascript
 import React from 'react';
 
