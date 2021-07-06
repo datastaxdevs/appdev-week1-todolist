@@ -2,7 +2,7 @@
 # JAMStack + Netlify + Astra + Cassandra 📒
 *10 minutes, Beginner, [Start Building](https://github.com/DataStax-Examples/todo-astra-jamstack-netlify#prerequisites)*
 
-This is an example React To-Do application using a [DataStax Astra](https://astra.datastax.com/register?utm_source=devplay&utm_medium=github&utm_campaign=todo-astra-jamstack-netlify) free tier database.
+This is an example React To-Do application using a [DataStax Astra](https://dtsx.io/appdev-7-7) free tier database.
 <!--- ENDEXCLUDE --->
 
 ![image](https://monosnap.com/image/Fv0yPAznbeNJD3vYlQfztME6yogzFT)
@@ -29,7 +29,7 @@ Let's do some initial setup by creating a serverless(!) database.
 
 1. **Login/Register**
 Click the button to login or register with Datastax.
-- <a href="https://astra.datastax.com/register?utm_source=github&utm_medium=referral&utm_campaign=todo-astra-jamstack-netlify"><img src="https://dabuttonfactory.com/button.png?t=Create+Astra+Database&f=Calibri-bold&ts=20&tc=fff&hp=40&vp=10&c=8&bgt=unicolored&bgc=6fa8dc" /></a>
+- <a href="https://dtsx.io/appdev-7-7"><img src="https://dabuttonfactory.com/button.png?t=Create+Astra+Database&f=Calibri-bold&ts=20&tc=fff&hp=40&vp=10&c=8&bgt=unicolored&bgc=6fa8dc" /></a>
 - <details><summary>Show me!</summary>
     <img src="https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/astra-create-db.gif?raw=true" />
 </details>
