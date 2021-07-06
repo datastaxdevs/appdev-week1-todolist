@@ -1,9 +1,9 @@
 # Setup Basic App - Create React App
 
-## Step 1 - Checkout 'start-here' Branch
+## Step 1 - Checkout 'react-basics' Branch
 Make sure you are in the Gitpod terminal.
 
-✅ **Step 1a:** Run `git checkout 'start-here'`. This will checkout an empty environment as a starting point.
+✅ **Step 1a:** Run `git checkout 'react-basics'`. This will checkout an empty environment as a starting point.
 
 
 ## Step 2 - create-react-app
