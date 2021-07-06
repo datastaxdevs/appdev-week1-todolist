@@ -247,37 +247,6 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/appdev-week1-todolist/)
 
-## 7. Retrieve application token to securely connect to the database
-
-Use the token you previously generated. If you no longer have the token and did not download a .csv, you can generate a new token using [the instructions above](#2-create-a-security-token)
-
-You will also need the GraphQL Endpoint for your keyspace.
-First, go to the Astra DB connect page for your database.
-![graphql-endpoint-1](tutorial/images/graphql-keyspace-url-01.png)
-Then scroll down to find the endpoint for your keyspace.
-![graphql-endpoint-1](tutorial/images/graphql-keyspace-url-02.png)
-
-## 8. Configure Environment Variables and Install Dependencies
-
-✅ Create `.env` file
-
-In the repository directory run the following command  to set up your Astra environment.  Note that this does require Node 15 and NPM 7 to work.  You can install a node version manager like `nvm` or `n` to use multiple versions on your system.
-```bash
-npm exec astra-setup todos_workshop_db todos_keyspace
-```
-
-👩‍💻  Install all the packages
-
-```bash
-npm install -g netlify-cli
-```
-
-## 9. Launch your app
-  * Run the application 
-  ```
-  netlify dev
-  ```
-  * The application should automatically launch in the GitPod preview pane
 
 ### Things to Note:
  - The contents of this repo are based on [Jake's port](https://github.com/tjake/todo-astra-react-serverless/) of the [TodoMVC code](https://github.com/tastejs/todomvc/tree/master/examples/react) originally written by [Pete Hunt](https://github.com/petehunt).
