@@ -247,6 +247,16 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/appdev-week1-todolist/)
 
+### Need a refresher on React Basics?
+
+<details><summary>Take me to the React stuff</summary>
+  We've created a separate branch going over the Basics of React. To get there, run the following in the Gitpod terminal.
+
+  ```git checkout 'react-basics'```
+
+  You can also switch to the 'react-basics' repo here to view the instructions. When you're done, checkout the 'main' branch to continue on.
+</details>
+
 
 ### Things to Note:
  - The contents of this repo are based on [Jake's port](https://github.com/tjake/todo-astra-react-serverless/) of the [TodoMVC code](https://github.com/tastejs/todomvc/tree/master/examples/react) originally written by [Pete Hunt](https://github.com/petehunt).
