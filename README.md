@@ -120,7 +120,9 @@ The status will change to `Active` when the database is ready, this will only ta
 
 ![image](https://user-images.githubusercontent.com/23346205/124658644-ffd8c880-de71-11eb-8064-c26a2979b66f.png?raw=true)
 
-2. Then, within the **schemas** section navigate to **Create a table** and click on it to open the section.
+2. Then, within the **schemas** section navigate to **Create a table** and click on it to open the section. 
+- Take particular note of the REST URI **/api/rest/v2/schemas/keyspaces/{keyspaceName}/tables**. 
+- Also take note this is using a **POST** command.
 
 ![image](https://user-images.githubusercontent.com/23346205/124658990-71187b80-de72-11eb-8d25-01e6c6216aa5.png?raw=true)
 
@@ -175,45 +177,68 @@ The status will change to `Active` when the database is ready, this will only ta
 
 You should see a **201** response telling you it correctly created the "restfromreadme_by_id" table.
 
+Again, take a note of the Request URL that was used to create the table. This comes into play later when we take a look at the code in `astraRestClient.js` used to create our TODO application table.
+
+![image](https://user-images.githubusercontent.com/23346205/124663337-f05c7e00-de77-11eb-8daa-856d15f0d223.png?raw=true)
+
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
 ## 4. Insert data in the Table with the REST API using Swagger
+Now that we have a table to use, let's insert a row of data into the table, again using REST to do so.
 
-✅  **Step 4a:** In graphQL playground, change tab to now use `graphql`. Edit the end of the URl to change from `system` to the name of your keyspace: `netflix_keyspace`
+✅  **Step 4a:** Navigate to **Add row** section
 
-✅  **Step 4b:** Populate **HTTP HEADER** variable `x-cassandra-token` on the bottom of the page with your token as shown below (again !! yes this is not the same tab)
+1. Scroll down and navigate to the **data** section
+2. Then find **Add row** and click it to open the section
+  - Also take note this is using a **POST** command.
+3. Click **Try it out** just like we did previously
 
-![image](img/graphql-playground-2.png?raw=true)
+![image](https://user-images.githubusercontent.com/23346205/124664268-2fd79a00-de79-11eb-8902-1d6636e986fb.png?raw=true)
 
-✅  **Step 4c:** In GraphQL Playground,populate the `reference_list` table with the following values
+✅  **Step 4b:** FIll in values and add a row
 
-- Copy the following mutation on the left panel
+1. Add your Astra token
+2. Add the keyspaceName `todos_keyspace`
+3. Add the tableName `restfromreadme_by_id`. Note, this is the table we created in the earlier step
+
+![image](https://user-images.githubusercontent.com/23346205/124664687-d15eeb80-de79-11eb-9250-cb1a996702d8.png?raw=true)
+
+4. Copy the following JSON into the **body**
 
 ```json
 {"id":"57dbd260-d905-11eb-b985-c522859819b9","completed":false,"text":"TODO FROM README","key":"none"}
 ```
 
-* Use the arrow in the middle of the screen to execute the query
+5. Click **Execute**. You should see code **201** in the reponse telling you it was a success and displaying the id of the row you just created.
+
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
-## 5. Retrieving list of values
+## 5. Retrieving values
+Finally, now that we created a table and inserted a row of data let's **GET** the data back out.
 
-✅  **Step 5a:** In GraphQL Playground, not changing tab (yeah) list values from the table with the following query.
+✅  **Step 5a:** Navigate to **Retrieve all rows** section
 
-```yaml
-query getAllGenre {
-    reference_list (value: {label:"genre"}) {
-      values {
-      	value
-      }
-    }
-}
-```
+1. Scroll up within the **data** section
+2. Then find **Retrieve all rows** and click it to open the section
+  - Take note this is using a **GET** command.
+3. Click **Try it out** just like we did previously
 
-*👁️ Expected output*
-![image](img/graphql-playground-3.png?raw=true)
+![image](https://user-images.githubusercontent.com/23346205/124666300-d6bd3580-de7b-11eb-8bf6-aeeb0487962b.png?raw=true)
+
+✅  **Step 5b:** Execute the command to display the data
+
+1. Enter your **Astra token _(X-Cassandra-Token)_**
+2. Enter the **keyspaceName** `todos_keyspace`
+3. Enter the **tableName** `restfromreadme_by_id`
+
+![image](https://user-images.githubusercontent.com/23346205/124666624-50552380-de7c-11eb-8083-0d520eefc835.png?raw=true)
+
+4. Click **Execute**
+5. View the end result data that should be exactly what we created in the previous step
+
+![image](https://user-images.githubusercontent.com/23346205/124666847-9d38fa00-de7c-11eb-8673-84f421ff9282.png?raw=true)
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
