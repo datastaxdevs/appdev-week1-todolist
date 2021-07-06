@@ -253,7 +253,7 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
   We've created a separate branch going over the Basics of React. To get there, run the following in the Gitpod terminal.
 
   ``` bash
-  git checkout 'react-basics'
+  git checkout react-basics
   ```
 
   You can also switch to the 'react-basics' repo here to view the instructions. When you're done, checkout the 'main' branch to continue on.
