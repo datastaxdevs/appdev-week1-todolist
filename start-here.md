@@ -1,7 +1,12 @@
 # Setup Basic App - Create React App
 
 ## create-react-app
+
+Create React App is a fantastic tool to spin up a basic React App with all necessary dependencies.
+
 Run `npx create-react-app .`
+
+And that's it! We now have a basic React App. We can go ahead and run the app right away.
 
 Run `npm start`.
 
