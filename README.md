@@ -114,13 +114,28 @@ The status will change to `Active` when the database is ready, this will only ta
 *As show on the picture below.*
 ![image](https://user-images.githubusercontent.com/23346205/124656913-d28b1b00-de6f-11eb-9712-e7629f5b8867.png?raw=true)
 
-✅  **Step 3b:** In GraphQL Playground, **Populate HTTP HEADER** variable `x-cassandra-token` on the bottom of the page with your token as shown below
+✅  **Step 3b:** Navigate to **create a table** section
 
-![image](img/graphql-playground.png?raw=true)
+1. Once **Swagger** is launched, scroll down and navigate to the **schemas** section
 
-✅  **Step 3c:** In GraphQL Playground, create a table with the following mutation, making sure to replace `netflix_keyspace` if you used a different name:
+![image](https://user-images.githubusercontent.com/23346205/124658644-ffd8c880-de71-11eb-8064-c26a2979b66f.png?raw=true)
 
-- Copy the following mutation on the left panel
+2. Then, within the **schemas** section navigate to **Create a table** and click on it to open the section.
+
+![image](https://user-images.githubusercontent.com/23346205/124658990-71187b80-de72-11eb-8d25-01e6c6216aa5.png?raw=true)
+
+3. Click the "Try it out" button
+
+![image](https://user-images.githubusercontent.com/23346205/124659185-ae7d0900-de72-11eb-9108-1595c3306bb3.png?raw=true)
+
+✅  **Step 3c:** Create table **restfromreadme_by_id**
+
+1. Enter your **Astra token _(X-Cassandra-Token)_**
+2. Enter the **keyspaceName** `todos_keyspace`
+
+![image](https://user-images.githubusercontent.com/23346205/124659838-627e9400-de73-11eb-97a9-4a888fc52569.png?raw=true)
+
+3. Finally, copy the create table statement using the code below into the **body** field
 ```json
 {
   "name": "restfromreadme_by_id",
@@ -153,9 +168,13 @@ The status will change to `Active` when the database is ready, this will only ta
   }
 }
 ```
-* Use the arrow in the middle of the screen to execute the query
 
-![image](tutorial/images/playground-1.png?raw=true)
+4. And click **execute** to apply the command and create the table
+
+![image](https://user-images.githubusercontent.com/23346205/124660673-84c4e180-de74-11eb-89a9-55dfb017bb8f.png?raw=true)
+
+You should see a **201** response telling you it correctly created the "restfromreadme_by_id" table.
+
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
