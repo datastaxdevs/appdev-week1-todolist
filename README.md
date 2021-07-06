@@ -1,160 +1,287 @@
-<!--- STARTEXCLUDE --->
-# JAMStack + Netlify + Astra + Cassandra 📒
-*10 minutes, Beginner, [Start Building](https://github.com/DataStax-Examples/todo-astra-jamstack-netlify#prerequisites)*
+# Setup Basic App - Create React App
 
-This is an example React To-Do application using a [DataStax Astra](https://astra.datastax.com/register?utm_source=devplay&utm_medium=github&utm_campaign=todo-astra-jamstack-netlify) free tier database.
-<!--- ENDEXCLUDE --->
+## create-react-app
 
-![image](https://monosnap.com/image/Fv0yPAznbeNJD3vYlQfztME6yogzFT)
+Create React App is a fantastic tool to spin up a basic React App. It includes several useful libraries that allow for rapid development and efficient coding. Let's use it now to setup up a new app.
 
-## Objectives
-* Provide a fullstack development example using Astra as the storage backend
+- Make sure you are in the `appdev-week1-todolist` folder.
+- Run `npx create-react-app .` 
 
-## How this works
-Once the Astra credentials are provided, the necessary tables are created in the database. The webservice will be available on port 8080 once the application has been deployed.
+*If you want `create-react-app` to dynamically create the root directory for you, you can run `npx create-react-app <app-name>`*
 
-[JAMstack](https://jamstack.org/) is a big leap forward in how we can write web applications that are easy to write, deploy, scale, and also maintain. Using this approach means that newly created content is rendered from a content API, while a static render of it is being built into the site for future.
+And that's it! We now have a basic React App. We can go ahead and run the app right away.
 
-<!--- STARTEXCLUDE --->
-# Running JAMStack + Netlify + Astra + Cassandra 
-Follow the instructions below to get started.
+### Run `npm start`.
 
-## Prerequisites
-* git installed on your local system
-* github account
-* [node 15 and npm 7 or later](https://www.whitesourcesoftware.com/free-developer-tools/blog/update-node-js/)
+![Image](/tutorial/app_basic.png)
 
-## Getting Started
-Let's do some initial setup by creating a serverless(!) database.
+As the message states, we can make changes to `App.js` to update the page. Let's make a few changes.
 
-1. **Login/Register**
-Click the button to login or register with Datastax.
-- <a href="https://astra.datastax.com/register?utm_source=github&utm_medium=referral&utm_campaign=todo-astra-jamstack-netlify"><img src="https://dabuttonfactory.com/button.png?t=Create+Astra+Database&f=Calibri-bold&ts=20&tc=fff&hp=40&vp=10&c=8&bgt=unicolored&bgc=6fa8dc" /></a>
-- <details><summary>Show me!</summary>
-    <img src="https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/astra-create-db.gif?raw=true" />
-</details>
+### Edit `src/App.js`
+``` javascript
+import logo from './logo.svg';
+import './App.css';
 
-**Use the following values when creating the database**
-|Field| Value|
-|---|---|
-|**database name**| `netlify` |
-|**keypace**| `todos` |
-|**Cloud Provider**| *Use the one you like, click a cloud provider logo,  pick an Area in the list and finally pick a region.* |
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Hello World!
+        </p>
+      </header>
+    </div>
+  );
+}
 
-
-2. **Deploy to Netlify**
-- <details><summary> What does the netlify deploy button do?</summary>The Netlify deploy button will:<ul>
-    <li>Create a new repository for you on Github</li>
-    <li>Create a site on Netlify</li>
-    <li>Link the two together.</li></ul>
-</details>
-
-- Click the button to deploy:
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/synedra/netlify-astra-example)
- * <details><summary>Show me!</summary>
-    <img src="https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/astra-create-token.gif?raw=true" />
-    </details>
-
-This will take a few minutes.
-
-  * Click on `Site deploy in progress`, 
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-1.png" />
-    </details>
-
-  * Click the top deploy link to see the build process.
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-2.png" />
-    </details>
-
-  * Wait until the build complete `Netlify Build Complete`,  **When you see Pushing to repository** you're ready to move on.
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-3.png" />
-    </details>
-
-  * Scroll up to the top and click on the site name (it'll be after {yourlogin}'s Team next to the Netlify button).
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-4.png" />
-    </details>
-
-3. **Clone your GitHub repository**
-
-  * Click on the `GitHub` in `Deploys from GitHub` to get back to your new repository.  Scroll to where you were in the README.
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-5.png" />
-    </details>
-
-  * Clone this repository to your local system by clicking the `Code` button, 
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-6.png" />
-    </details>
-
-  * Copying the link, and running in a terminal
-    ```bash
-    git clone {repo_link}
-    ```
-    <details>
-    <summary>Show me! </summary>
-    <img src="/images/deploy-7.png" />
-    </details>
-
-  * Change into your repository directory 
-  ```bash
-  cd netlify-astra-example
-  ```
-
-7. In the repository directory
-
-```bash
-npm install
-npm install -g netlify-cli
+export default App;
 ```
 
-8. In the repository directory run the following command  to set up your Astra environment.  Note that this does require Node 15 and NPM 7 to work.  You can install a node version manager like `nvm` or `n` to use multiple versions on your system.
+So we've removed some unnecessary links, and changed the text. Let's save and update the site.
+
+![Image](/tutorial/app_helloWorld.png)
+
+Cool right?
+
+For our Todo App, we are going to want to have a list of Todos, so let's go over making a new component.
+
+
+## Basic Component
+- Create a folder, `components`
+- Create a new file, `List.js`
+
+### Edit `List.js`
+``` javascript
+import React from 'react'
+
+function List() {
+    return (
+        
+    );
+}
+
+export default List;
 ```
-npm exec astra-setup netlify todos
+
+Here's our basic component. We are importing our necessary `React` library, defining our `List` component, and exporting it for use in `App.js`.
+
+Let's think about this a bit. We are going to have a list of items, so let's define an array to hold that list, and make up some entries.
+
+``` javascript
+const itemList = ["Get milk", "Buy Amazon", "Take over the world"];
 ```
 
-<details>
-<summary>What does astra-setup do?</summary>
-    To setup your ASTRA instance, you want to run `npm exec astra-setup`
+Now let's render this list by mapping each item in the array to a `<p>` tag.
 
-    This will do the following:
-    * Have you go to your [Astra Database](https://datastx.io/workshops) to register or login. There is no credit card required to sign up. The 'Pay as you go' option gives you a huge amount of transactions for free:
-        * 30 million reads
-        * 5 million writes
-        * 40 gigabytes of storage
-    * Give steps to grab a Database Administrator Token and paste it into the input field
-    * Ask you what database you want to use (default, existing, create)
-    * Create or access the database
-    * Create/update an .env file in the project root
-    * Create/update an .astrarc file in your home directory
-        * This can be used by httpie-astra `pip3 install httpie-astra`
-        * It can also be used by the @astra/collections and @astra/rest node modules
+### Edit `List.js`
+``` javascript
+import React from 'react'
 
-    ## Specify the database and keyspace
-    You can run the script and tell it which database/keyspace to use by using:
-    `npm exec astra-setup databasename keyspacename`
-</details>
+function List() {
+    const itemList = ["Get milk", "Buy Amazon", "Take over the world"];
+
+    return (
+        itemList.map((item) => (
+            <p>{item}</p>
+        ))
+    );
+}
+
+export default List;
+```
+
+Great! We've created our first custom component! Now we need to import it into `App.js` and use it.
+
+### Edit `App.js`
+``` javascript
+import logo from './logo.svg';
+import './App.css';
+
+import List from './components/List';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <List />
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Now save, and reload the site.
+
+![Image](/tutorial/app_withList.png)
+
+Awesome! But that's just the start. We can make our component more dynamic using `props`.
+
+## Component Props
+
+Okay, so we have our `List.js` component, but it's not very dynamic. It just takes the array we specified and spits out each item as text. We can move the array out of the `List` component and provide it as a `prop` instead.
+
+### Edit `List.js`
+``` javascript
+import React from 'react'
+
+function List(props) {
+    const { itemList } = props;
+
+    return (
+        itemList.map((item) => (
+            <p>{item}</p>
+        ))
+    );
+}
+
+export default List;
+```
+
+Now our `List` component is going to be looking for a `prop` called `itemList` that contains an array. We will provide that prop when we use the component.
+
+``` javascript
+<List itemList={["Get milk", "Buy Amazon", "Take over the world"]}/>
+```
+
+Let's add this to `App.js`.
+
+### Edit `App.js`
+``` javascript
+import logo from './logo.svg';
+import './App.css';
+
+import List from './components/List';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <List itemList={["Get milk", "Buy Amazon", "Take over the world"]}/>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+What this allows us to do is reuse our `List` component for any given array. Let's add another `List` component.
+
+``` javascript
+<List itemList={["Get bread", "Get eggs"]} />
+```
+
+![Image](/tutorial/app_2lists.png)
+
+Now our component is dynamic! All we need to do is get a list of items as an array, and we can use our component to list the items out.
+
+...But we can go deeper
+
+## Going Deeper
+
+![deeper](/tutorial/deeper.gif)
+
+Let's make another new component
+
+`components/Item.js`
+``` javascript
+import React from 'react';
+
+function Item(props) {
+    const { item } = props;
+
+    return (
+        <p>{item}</p>
+    );
+}
+
+export default Item;
+```
+
+And import and use this component in place of `<p>{item}</p>` in our `List` component.
+
+### Edit `List.js`
+``` javascript
+import React from 'react';
+import Item from './Item';
+
+function List(props) {
+    const { itemList } = props;
+
+    return (
+        itemList.map((item) => (
+            <Item item={item} />
+        ))
+    );
+}
+
+export default List;
+```
+
+Now we have an `Item` component that we can customize. For example, we can give the item a different background when the user mouses over.
+
+### Edit `Item.js`
+``` javascript
+import React from 'react';
+
+function Item(props) {
+    const { item } = props;
+    const [bg, setBg] = React.useState('');
+
+    const handleMouseOver = () => {
+        setBg('red');
+    }
+    const handleMouseOut = () => {
+        setBg('');
+    }
+
+    return (
+        <p 
+            onMouseOver={handleMouseOver} 
+            onMouseOut={handleMouseOut} 
+            style={{backgroundColor: bg}}
+        >
+            {item}
+        </p>
+    );
+}
+
+export default Item;
+```
+
+![item](/tutorial/app_customItem.gif)
+
+Or we can add input to each item.
+
+### Edit `Item.js`
+``` javascript
+import React from 'react';
+
+function Item(props) {
+    const { item } = props;
+    const [isChecked, setIsChecked] = React.useState(false);
+
+    return (
+        <div>
+            <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={() => setIsChecked(true)}
+            />
+            <label>{item}</label>
+        </div>
+    );
+}
+
+export default Item;
+```
+
+![item](/tutorial/app_inputItem.gif)
 
 
-9. Next you will run some commands to connect netlify to your site.
-      * `npm install -g netlify-cli`
-      * `netlify login` - this will pop up a browser to authenticate with netlify.  
-      * `netlify link` - this will link your workspace to the associated site
-      * `netlify env:import .env` - this will take the .env file created by astra-setup and upload it to netlify.
-      * Run the application `netlify dev` and open http://localhost:8080 to view your application:
-      * `netlify deploy`
-      * `netlify open:site` - will launch a browser with your new site on Netlify
-
-
-### Things to Note:
- - The contents of this repo are based on [Jake's port](https://github.com/tjake/todo-astra-react-serverless/) of the [TodoMVC code](https://github.com/tastejs/todomvc/tree/master/examples/react) originally written by [Pete Hunt](https://github.com/petehunt).
- - The example is modified from https://github.com/huksley/todo-react-ssr-serverless.
-<!--- ENDEXCLUDE --->
+Voila!
