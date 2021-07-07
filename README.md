@@ -70,7 +70,11 @@ That's it, you are done! Expect an email next week!
 6. [Launch GitPod IDE](#6-launch-gitpod-ide)
 7. [Launch the TODO app](#7-launch-the-todo-app)
 
-Let's do some initial setup by creating a serverless(!) database.
+## An introduction to web development
+### Demo
+- [Step1](https://codepen.io/DatastaxDevs/pen/WNjrXXp)
+- [Step2](https://codepen.io/DatastaxDevs/pen/QWvyOOv)
+- [Step3](https://codepen.io/DatastaxDevs/pen/mdmVRwy)
 
 ## 1. Login or Register to AstraDB and create database
 **`ASTRADB`** is the simplest way to run Cassandra with zero operations at all - just push the button and get your cluster. No credit card required, $25.00 USD credit every month, roughly 5M writes, 30M reads, 40GB storage monthly - sufficient to run small production workloads.  
