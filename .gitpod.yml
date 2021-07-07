@@ -1,7 +1,9 @@
 tasks:
   - name: appdev-week1-todolist
     init: |
-      cd /workspace/appdev-week1-todolist 
+      cd /workspace/appdev-week1-todolist
+      nvm install node
+      npm install -g npm@latest
     command: |
       cd /workspace/appdev-week1-todolist
       echo "appdev-week1-todolist gitpod ready - LET'S DO THIS!"
@@ -14,10 +16,10 @@ ports:
 github:
   prebuilds:
     master: true
-    branches: false
-    pullRequests: false
+    branches: true
+    pullRequests: true
     pullRequestsFromForks: false
-    addCheck: false
+    addCheck: true
     addComment: false
-    addBadge: false
+    addBadge: true
     addLabel: false
