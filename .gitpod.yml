@@ -8,11 +8,6 @@ tasks:
       cd /workspace/appdev-week1-todolist
       echo "appdev-week1-todolist gitpod ready - LET'S DO THIS!"
       npm install
-ports:
-  - port: 8080 # Application
-    onOpen: ignore
-  - port: 8888 # Webpack dev server
-    onOpen: open-browser
 github:
   prebuilds:
     master: true
@@ -23,3 +18,8 @@ github:
     addComment: false
     addBadge: true
     addLabel: false
+ports:
+  - port: 8888
+    onOpen: open-preview
+  - port: 3000
+    onOpen: ignore  
