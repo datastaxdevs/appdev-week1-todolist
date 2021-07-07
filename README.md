@@ -258,7 +258,7 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 [🏠 Back to Table of Contents](#table-of-contents)
 
 ## 6. Launch GitPod IDE
-- Click the button to launch the GitPod IDE from **YOUR** repository.
+- Click the button to launch the GitPod IDE.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/appdev-week1-todolist/)
 
