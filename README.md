@@ -2,17 +2,17 @@
 
 # Setup Basic App - Create React App
 
-## Step 1 - Checkout 'react-basics' Branch
-Make sure you are in the Gitpod terminal.
-
-✅ **Step 1a:** Run `git checkout react-basics`. This will checkout an empty environment as a starting point.
+## Step 1 - Start in a clean environment
+Make sure you are in a clean environment as a starting point.
 
 
 ## Step 2 - create-react-app
 
 Create React App is a fantastic tool to spin up a basic React App with all necessary dependencies.
 
-✅ **Step 2a:** Run `npx create-react-app .`
+✅ **Step 2a:** Run `npx create-react-app my-app`
+
+✅ **Step 2b:** Run `cd my-app`
 
 And that's it! We now have a basic React App. We can go ahead and run the app right away.
 
