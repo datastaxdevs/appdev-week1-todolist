@@ -252,11 +252,9 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 <details><summary>Take me to the React stuff</summary>
   We've created a separate branch going over the Basics of React. To get there, run the following in the Gitpod terminal.
 
-  ``` bash
-  git checkout react-basics
-  ```
+[GOTO React-Basics](https://github.com/datastaxdevs/appdev-week1-todolist/tree/react-basics/README.md)
 
-  You can also switch to the 'react-basics' repo here to view the instructions. When you're done, checkout the 'main' branch to continue on.
+  You can also switch to the 'react-basics' branch here to view the instructions. When you're done, checkout the 'main' branch to continue on.
 </details>
 
 ## 7. Launch the TODO app
