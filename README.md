@@ -59,6 +59,17 @@ Don't forget to complete your upgrade and get your verified skill badge! Finish 
 That's it, you are done! Expect an email next week!
   
 # Let's start
+
+## Table of contents
+
+1. [Login or Register to AstraDB and create database](#1-login-or-register-to-astradb-and-create-database)
+2. [Create a security token](#2-create-a-security-token)
+3. [Create a table with REST API using Swagger](#3-create-a-table-with-rest-api-using-swagger)
+4. [Insert data in the Table with the REST API using Swagger](#4-insert-data-in-the-table-with-the-rest-api-using-swagger)
+5. [Retrieving values](#5-retrieving-values)
+6. [Launch GitPod IDE](#6-launch-gitpod-ide)
+7. [Launch the TODO app](#7-launch-the-todo-app)
+
 Let's do some initial setup by creating a serverless(!) database.
 
 ## 1. Login or Register to AstraDB and create database
@@ -246,6 +257,15 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 - Click the button to launch the GitPod IDE from **YOUR** repository.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/appdev-week1-todolist/)
+
+# Need a refresher on React Basics?
+<details><summary>Take me to the React stuff</summary>
+  We've created a separate repo going over the Basics of React. To get there, click the link below.
+  
+  [GOTO React-Basics](https://github.com/datastaxdevs/react-basics)
+  
+  When you're done, just click on the "Back to Main" breadcrumb to come back here.
+</details>
 
 ## 7. Launch the TODO app
 
