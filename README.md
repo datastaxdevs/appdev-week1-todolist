@@ -10,15 +10,15 @@ git checkout final
 
 ## Step 2 - Install libraries
 ```bash
-npm install
-```
-
-```bash
 npm install react-scroll-to-bottom --force
 ```
 
 ```bash
 npm install console-feed --force
+```
+
+```bash
+npm install
 ```
 
 ```bash
