@@ -111,7 +111,7 @@ The status will change to `Active` when the database is ready, this will only ta
 3. Click `REST API`
 4. Clik link to your swagger endpoint.
 
-*As show on the picture below.*
+*As shown on the picture below.*
 ![image](https://user-images.githubusercontent.com/23346205/124656913-d28b1b00-de6f-11eb-9712-e7629f5b8867.png?raw=true)
 
 ✅  **Step 3b:** Navigate to **create a table** section
@@ -258,6 +258,34 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 
   You can also switch to the 'react-basics' repo here to view the instructions. When you're done, checkout the 'main' branch to continue on.
 </details>
+
+## 7. Launch the TODO app
+
+✅  **Step 7a:** Retrieve application token to securely connect to the database
+
+Use the token you previously generated. If you no longer have the token and did not download a .csv, you can generate a new token using [the instructions above](#2-create-a-security-token)
+
+✅  **Step 7b:** Configure Environment Variables and Install Dependencies
+
+1. Create `.env` file
+
+In the repository directory run the following command  to set up your Astra environment.  Note that this does require Node 15 and NPM 7 to work.  You can install a node version manager like `nvm` or `n` to use multiple versions on your system.
+```bash
+npm exec astra-setup todos_workshop_db todos_keyspace
+```
+
+2. 👩‍💻  Install all the packages
+
+```bash
+npm install -g netlify-cli
+```
+
+✅  **Step 7c:** Launch your app
+  * Run the application 
+  ```
+  netlify dev
+  ```
+  * The application should automatically launch in the GitPod preview pane
 
 
 ### Things to Note:
