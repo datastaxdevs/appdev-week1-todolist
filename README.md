@@ -135,7 +135,7 @@ The status will change to `Active` when the database is ready, this will only ta
 1. Enter your **Astra token _(X-Cassandra-Token)_**
 2. Enter the **keyspaceName** `todos`
 
-![image](https://user-images.githubusercontent.com/23346205/124659838-627e9400-de73-11eb-97a9-4a888fc52569.png?raw=true)
+![image](https://github.com/datastaxdevs/appdev-week1-todolist/blob/main/images/3c2_create-table.png?raw=true)
 
 3. Finally, copy the create table statement using the code below into the **body** field
 ```json
@@ -202,7 +202,7 @@ Now that we have a table to use, let's insert a row of data into the table, agai
 2. Add the keyspaceName `todos`
 3. Add the tableName `restfromreadme_by_id`. Note, this is the table we created in the earlier step
 
-![image](https://user-images.githubusercontent.com/23346205/124664687-d15eeb80-de79-11eb-9250-cb1a996702d8.png?raw=true)
+![image](https://github.com/datastaxdevs/appdev-week1-todolist/blob/main/images/4b3_insert-row.png?raw=true)
 
 4. Copy the following JSON into the **body**
 
@@ -210,7 +210,7 @@ Now that we have a table to use, let's insert a row of data into the table, agai
 {"id":"57dbd260-d905-11eb-b985-c522859819b9","completed":false,"text":"TODO FROM README","key":"none"}
 ```
 
-5. Click **Execute**. You should see code **201** in the reponse telling you it was a success and displaying the id of the row you just created.
+5. Click **Execute**. You should see code **201** in the response telling you it was a success and displaying the id of the row you just created.
 
 
 [🏠 Back to Table of Contents](#table-of-contents)
@@ -233,7 +233,7 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 2. Enter the **keyspaceName** `todos`
 3. Enter the **tableName** `restfromreadme_by_id`
 
-![image](https://user-images.githubusercontent.com/23346205/124666624-50552380-de7c-11eb-8083-0d520eefc835.png?raw=true)
+![image](https://github.com/datastaxdevs/appdev-week1-todolist/blob/main/images/5b3_retrieve-rows.png?raw=true)
 
 4. Click **Execute**
 5. View the end result data that should be exactly what we created in the previous step
