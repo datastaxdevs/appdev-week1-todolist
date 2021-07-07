@@ -2,11 +2,9 @@ tasks:
   - name: appdev-week1-todolist
     init: |
       cd /workspace/appdev-week1-todolist 
-      nvm install node
-      npm install -g npm@latest
     command: |
-      cd /workspace/workshop-astra-tik-tok
-      echo "workshop-astra-tik-tok gitpod ready - LET'S DO THIS!"
+      cd /workspace/appdev-week1-todolist
+      echo "appdev-week1-todolist gitpod ready - LET'S DO THIS!"
       npm install
 ports:
   - port: 8080 # Application
