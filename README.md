@@ -77,7 +77,7 @@ _Make sure to chose a password with minimum 8 characters, containing upper and l
 |Field| Value|
 |---|---|
 |**database name**| `todos_workshop_db` |
-|**keypace**| `todos_keyspace` |
+|**keypace**| `todos` |
 |**Cloud Provider**| *Use the one you like, click a cloud provider logo,  pick an Area in the list and finally pick a region.* |
 
 _You can technically use whatever you want and update the code to reflect the keyspace. This is really to get you on a happy path for the first run._
@@ -133,7 +133,7 @@ The status will change to `Active` when the database is ready, this will only ta
 ✅  **Step 3c:** Create table **restfromreadme_by_id**
 
 1. Enter your **Astra token _(X-Cassandra-Token)_**
-2. Enter the **keyspaceName** `todos_keyspace`
+2. Enter the **keyspaceName** `todos`
 
 ![image](https://user-images.githubusercontent.com/23346205/124659838-627e9400-de73-11eb-97a9-4a888fc52569.png?raw=true)
 
@@ -199,7 +199,7 @@ Now that we have a table to use, let's insert a row of data into the table, agai
 ✅  **Step 4b:** FIll in values and add a row
 
 1. Add your Astra token
-2. Add the keyspaceName `todos_keyspace`
+2. Add the keyspaceName `todos`
 3. Add the tableName `restfromreadme_by_id`. Note, this is the table we created in the earlier step
 
 ![image](https://user-images.githubusercontent.com/23346205/124664687-d15eeb80-de79-11eb-9250-cb1a996702d8.png?raw=true)
@@ -230,7 +230,7 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 ✅  **Step 5b:** Execute the command to display the data
 
 1. Enter your **Astra token _(X-Cassandra-Token)_**
-2. Enter the **keyspaceName** `todos_keyspace`
+2. Enter the **keyspaceName** `todos`
 3. Enter the **tableName** `restfromreadme_by_id`
 
 ![image](https://user-images.githubusercontent.com/23346205/124666624-50552380-de7c-11eb-8083-0d520eefc835.png?raw=true)
@@ -271,7 +271,7 @@ Use the token you previously generated. If you no longer have the token and did 
 
 In the repository directory run the following command  to set up your Astra environment.  Note that this does require Node 15 and NPM 7 to work.  You can install a node version manager like `nvm` or `n` to use multiple versions on your system.
 ```bash
-npm exec astra-setup todos_workshop_db todos_keyspace
+npm exec astra-setup todos_workshop_db todos
 ```
 
 2. 👩‍💻  Install all the packages
