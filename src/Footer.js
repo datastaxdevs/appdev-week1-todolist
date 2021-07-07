@@ -38,7 +38,6 @@ function Footer (props) {
   }
 
   useEffect(() => {
-		console.log("PROP Change: Active items is %d", activeCount);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [activeCount]);
 

@@ -48,7 +48,6 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		console.log("STATE Change:", restTodos)
 	}, [restTodos]);
 
 	const getRestTodos = async () => {
