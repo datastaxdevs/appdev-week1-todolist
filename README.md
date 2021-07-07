@@ -1,3 +1,5 @@
+[<-- Back to Main](https://github.com/datastaxdevs/appdev-week1-todolist/blob/main/README.md)
+
 # Setup Basic App - Create React App
 
 ## Step 1 - Checkout 'react-basics' Branch
@@ -288,3 +290,5 @@ export default Item;
 
 
 Voila!
+
+[<-- Back to Main](https://github.com/datastaxdevs/appdev-week1-todolist/blob/main/README.md)
