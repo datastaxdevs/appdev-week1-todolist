@@ -1,3 +1,8 @@
-"workbench.editorAssociations": {
-    "*.md": "vscode.markdown.preview.editor"
+{
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreview": true,
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    }
 }
