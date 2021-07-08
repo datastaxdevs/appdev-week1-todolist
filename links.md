@@ -15,7 +15,7 @@ https://github.com/datastaxdevs/react-basics
 
 Menti
 ``` bash
-Join @ menti.com! Code: 1203 9205
+Join @ menti.com! https://www.menti.com/ni6by99hiu
 ```
 
 Discord
