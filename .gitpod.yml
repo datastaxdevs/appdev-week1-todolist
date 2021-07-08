@@ -6,6 +6,7 @@ tasks:
       npm install -g npm@latest
     command: |
       cd /workspace/appdev-week1-todolist
+      gp open README.md
       echo "appdev-week1-todolist gitpod ready - LET'S DO THIS!"
       npm install
 github:
