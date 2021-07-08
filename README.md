@@ -261,9 +261,8 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 ## 6. Launch GitPod IDE
 
 - Need a refresher on react basics?  
-```diff
-  * Check out our [React tutorial](https://github.com/datastaxdevs/react-basics). When you're done, just click on the "Back to  Main" breadcrumb to come back here.
-```
+  - Check out our [React tutorial](https://github.com/datastaxdevs/react-basics). 
+  - When you're done, just click on the "Back to  Main" breadcrumb to come back here.
 
 - Click the button to launch the GitPod IDE.
 
