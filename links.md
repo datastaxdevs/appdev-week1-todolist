@@ -8,6 +8,11 @@ Repo
 https://github.com/datastaxdevs/appdev-week1-todolist
 ```
 
+React Repo
+``` bash
+https://github.com/datastaxdevs/react-basics
+```
+
 Menti
 ``` bash
 Join @ menti.com! Code: 1203 9205
