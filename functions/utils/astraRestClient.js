@@ -1,5 +1,5 @@
-const { createClient}= require("@astrajs/rest")
-const chalk = require('chalk')
+const { createClient } = require("@astrajs/rest");
+const chalk = require("chalk");
 let astraRestClient = null;
 
 const requestWithRetry = async (url, client) => {
@@ -7,21 +7,21 @@ const requestWithRetry = async (url, client) => {
   for (let i = 1; i <= MAX_RETRIES; i++) {
     try {
       let response = await client.get(url);
-      return response
-    } catch(e) {
+      return response;
+    } catch (e) {
       const timeout = 500 * i * 10;
-      console.log(chalk.blue('         ... waiting', timeout, 'ms'));
+      console.log(chalk.blue("         ... waiting", timeout, "ms"));
       await wait(timeout);
     }
   }
-}
+};
 
 function wait(timeout) {
-	return new Promise((resolve) => {
-		setTimeout(() => {
-			resolve();
-		}, timeout);
-	});
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, timeout);
+  });
 }
 
 const getAstraRestClient = async () => {
@@ -31,61 +31,66 @@ const getAstraRestClient = async () => {
         astraDatabaseId: process.env.ASTRA_DB_ID,
         astraDatabaseRegion: process.env.ASTRA_DB_REGION,
         applicationToken: process.env.ASTRA_DB_APPLICATION_TOKEN,
-        debug: true
+        debug: true,
       },
       30000
     );
 
     // Check for the "rest" table. If it doesn't exist create it dynamically.
-    let tables = await astraRestClient.get('/api/rest/v2/schemas/keyspaces/todos/tables')
-    let results = tables.data.filter(entry => entry.name === "rest");
+    let tables = await astraRestClient.get(
+      "/api/rest/v2/schemas/keyspaces/todos/tables"
+    );
+    let results = tables.data.filter(
+      (entry) => entry.name === "todos_workshop_db"
+    );
     if (!results.length) {
-      await createTable("rest")
+      await createTable("todos_workshop_db");
     }
   }
   return astraRestClient;
 };
 
 async function createTable(name) {
-    let response = await astraRestClient.post('/api/rest/v2/schemas/keyspaces/todos/tables',
+  let response = await astraRestClient.post(
+    "/api/rest/v2/schemas/keyspaces/todos/tables",
     {
-      "name": "rest",
+      "name": "todos_workshop_db",
       "ifNotExists": true,
       "columnDefinitions": [
         {
           "name": "id",
           "typeDefinition": "uuid",
-          "static": false
+          "static": false,
         },
         {
           "name": "text",
           "typeDefinition": "text",
-          "static": false
+          "static": false,
         },
         {
           "name": "key",
           "typeDefinition": "text",
-          "static": false
+          "static": false,
         },
-            {
-              "name": "completed",
-              "typeDefinition": "boolean"
-            }
+        {
+          "name": "completed",
+          "typeDefinition": "boolean",
+        },
       ],
       "primaryKey": {
-        "partitionKey": [
-          "id"
-        ]
-      }
-    })
-    
-    response = await astraRestClient.post('/api/rest/v2/schemas/keyspaces/todos/tables/' + name + '/indexes',
+        "partitionKey": ["id"],
+      },
+    }
+  );
+
+  response = await astraRestClient.post(
+    "/api/rest/v2/schemas/keyspaces/todos/tables/" + name + "/indexes",
     {
       "column": "key",
       "name": "key_idx",
-      "ifNotExists": true
+      "ifNotExists": true,
     }
-    );
+  );
 }
 
 const getRestClient = async () => {
@@ -93,8 +98,8 @@ const getRestClient = async () => {
     const astraRestClient = await getAstraRestClient();
     await wait(1000);
     return astraRestClient;
-  };
+  }
   return astraRestClient;
-}
+};
 
 module.exports = { getRestClient, requestWithRetry, wait, astraRestClient };
