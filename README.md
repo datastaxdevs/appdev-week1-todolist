@@ -72,10 +72,10 @@ That's it, you are done! Expect an email next week!
 7. [Launch the TODO app](#7-launch-the-todo-app)
 
 ## An introduction to web development
-### Demo
-- [Step1](https://codepen.io/DatastaxDevs/pen/WNjrXXp)
-- [Step2](https://codepen.io/DatastaxDevs/pen/QWvyOOv)
-- [Step3](https://codepen.io/DatastaxDevs/pen/mdmVRwy)
+### CodePen starter examples
+- [HTML](https://codepen.io/DatastaxDevs/pen/WNjrXXp)
+- [CSS](https://codepen.io/DatastaxDevs/pen/QWvyOOv)
+- [Javascript](https://codepen.io/DatastaxDevs/pen/mdmVRwy)
 
 ## 1. Login or Register to AstraDB and create database
 **`ASTRADB`** is the simplest way to run Cassandra with zero operations at all - just push the button and get your cluster. No credit card required, $25.00 USD credit every month, roughly 5M writes, 30M reads, 40GB storage monthly - sufficient to run small production workloads.  
