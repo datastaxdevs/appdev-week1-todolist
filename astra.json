@@ -3,6 +3,7 @@
   "description": "This is an example React To-Do application using a DataStax Astra free tier database.",
   "duration": "10 minutes",
   "skillLevel": "Beginner",
+  "heroImage": "https://camo.githubusercontent.com/fae2f66007b221f99ded30bc5edf9bfe4f2046d4d7c426dede44d66cb0588c58/68747470733a2f2f6d6f6e6f736e61702e636f6d2f696d6167652f4676307950417a6e62654e4a443376596c51667a744d4536796f677a4654",
   "githubUrl": "https://github.com/DataStax-Examples/todo-astra-jamstack-netlify",
   "gitpodUrl": "https://dtsx.io/3gtADSq",
   "netlifyUrl": "https://dtsx.io/2EtfGty",
