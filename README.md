@@ -259,18 +259,14 @@ Finally, now that we created a table and inserted a row of data let's **GET** th
 [🏠 Back to Table of Contents](#table-of-contents)
 
 ## 6. Launch GitPod IDE
+
+- Need a refresher on react basics?  
+  - Check out our [React tutorial](https://github.com/datastaxdevs/react-basics). 
+  - When you're done, just click on the "Back to  Main" breadcrumb to come back here.
+
 - Click the button to launch the GitPod IDE.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/appdev-week1-todolist/)
-
-# Need a refresher on React Basics?
-<details><summary>Take me to the React stuff</summary>
-  We've created a separate repo going over the Basics of React. To get there, click the link below.
-  
-  [GOTO React-Basics](https://github.com/datastaxdevs/react-basics)
-  
-  When you're done, just click on the "Back to Main" breadcrumb to come back here.
-</details>
+  [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/appdev-week1-todolist/)
 
 ## 7. Launch the TODO app
 
